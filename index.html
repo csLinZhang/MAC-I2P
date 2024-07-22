@@ -48,7 +48,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">M<sup>2</sup>I2P: Image-to-Point Cloud Registration with Modality Approximation and Multi-Stage Matching</h1>
+          <h1 class="title is-1 publication-title">MAC-I2P: I2P Registration with Modality Approximation and Cone-Block-Point Matching</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               Yunda Sun<sup>1</sup>,</span>
@@ -125,7 +125,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        M<sup>2</sup>I2P estimate the relative pose between images and point clouds.
+        MAC-I2P estimate the relative pose between images and point clouds.
       </h2>
     </div>
   </div>
@@ -143,8 +143,11 @@
       alt="Interpolate start reference image."/>
     </div>
     <h3><p>
-      M<sup>2</sup>I2P is composed of four components: modality approximation, cross-modality feature embedding, multi-stage 2D-3D matching, and pose estimation. 
-      First, we mitigate the modality disparities by introducing more data redundancy through image depth estimation and point cloud voxelization, followed by feature extraction using corresponding backbones. Next, cross-modality feature embedding is employed to further align the feature domains. Further, multi-stage 2D-3D matching establishes pixel-point correspondences using the aligned cross-modality features as input. At last, the relative pose is inferred through the pose estimation component.
+      MAC-I2P is composed of two components: modality approximation and cone-block-point matching. 
+      First, the modality discrepancies are mitigated by introducing image depth estimation and point cloud voxelization. 
+      Subsequently, cross-modality feature embedding is employed to extract the cross-modality features of both image and point cloud. 
+      After obtaining the cross-modality features, pixel-point correspondences are established by cone-block-point matching. 
+      At last, the relative pose is inferred through the pose estimation.
     </p></h3>
   </div>
 </section>
